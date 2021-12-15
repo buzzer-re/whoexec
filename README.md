@@ -34,5 +34,17 @@ For the sake of simpliticy, you just have 1 argument to pass to this tiny tracer
 
 Then, after the endpoint security engine start and setup ours handlers, any kind of `exec` call will be logged in the terminal:
 
+```
+$ sudo ./whoexec ps
+2021-12-15 18:11:57.518 whoexec[7889:145988] Monitoring exec calls...
+2021-12-15 18:11:58.570 whoexec[7889:146065] ps was executed by /bin/bash PID: 7902
+2021-12-15 18:12:02.683 whoexec[7889:146065] ps was executed by /bin/zsh PID: 7922
+```
+
+That's it, very simple and useful!
+
+Thanks and feel free to contribute and open issues :) 
+
+
 
 
