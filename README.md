@@ -17,7 +17,7 @@ then you are ready to go, that's also the reason I will not publish any non sign
 
 First, clone this project:
 
-> git clone git@github.com:AandersonL/whoexec.git
+> git clone https://github.com/AandersonL/whoexec.git
 
 Make sure to have `Xcode` installed in your machine, after this you can:
 
