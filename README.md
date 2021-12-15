@@ -22,7 +22,7 @@ First, clone this project:
 Make sure to have `Xcode` installed in your machine, after this you can:
 
 * Open the project in Xcode and build it inside
-* run the following
+* Or run the following
   * xcodebuild -configuration Debug
   * The executable will be at `./build/Debug/whoexec`
 
