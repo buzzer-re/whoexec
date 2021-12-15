@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A24E0317276A558900FB0125 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A24E0316276A558900FB0125 /* main.m */; };
 		A24E031E276A559E00FB0125 /* whoexec.m in Sources */ = {isa = PBXBuildFile; fileRef = A24E031D276A559E00FB0125 /* whoexec.m */; };
+		A24E0324276A5C7600FB0125 /* libEndpointSecurity.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A24E0323276A5C7200FB0125 /* libEndpointSecurity.tbd */; };
+		A24E0327276A5DAF00FB0125 /* EndpointSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A24E0326276A5DAF00FB0125 /* EndpointSecurity.m */; };
+		A24E032E276A7A2800FB0125 /* libbsm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A24E032B276A793F00FB0125 /* libbsm.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,13 @@
 		A24E0316276A558900FB0125 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A24E031D276A559E00FB0125 /* whoexec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = whoexec.m; sourceTree = "<group>"; };
 		A24E031F276A55AF00FB0125 /* whoexec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whoexec.h; sourceTree = "<group>"; };
+		A24E0321276A5C6A00FB0125 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A24E0323276A5C7200FB0125 /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
+		A24E0325276A5CF800FB0125 /* EndpointSecurity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndpointSecurity.h; sourceTree = "<group>"; };
+		A24E0326276A5DAF00FB0125 /* EndpointSecurity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndpointSecurity.m; sourceTree = "<group>"; };
+		A24E0328276A737A00FB0125 /* whoexec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = whoexec.entitlements; sourceTree = "<group>"; };
+		A24E0329276A793600FB0125 /* libbsm.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.0.tbd; path = usr/lib/libbsm.0.tbd; sourceTree = SDKROOT; };
+		A24E032B276A793F00FB0125 /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A24E032E276A7A2800FB0125 /* libbsm.tbd in Frameworks */,
+				A24E0324276A5C7600FB0125 /* libEndpointSecurity.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +58,7 @@
 			children = (
 				A24E0315276A558900FB0125 /* whoexec */,
 				A24E0314276A558900FB0125 /* Products */,
+				A24E0320276A5C6A00FB0125 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +73,25 @@
 		A24E0315276A558900FB0125 /* whoexec */ = {
 			isa = PBXGroup;
 			children = (
+				A24E0328276A737A00FB0125 /* whoexec.entitlements */,
 				A24E0316276A558900FB0125 /* main.m */,
 				A24E031D276A559E00FB0125 /* whoexec.m */,
 				A24E031F276A55AF00FB0125 /* whoexec.h */,
+				A24E0325276A5CF800FB0125 /* EndpointSecurity.h */,
+				A24E0326276A5DAF00FB0125 /* EndpointSecurity.m */,
 			);
 			path = whoexec;
+			sourceTree = "<group>";
+		};
+		A24E0320276A5C6A00FB0125 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A24E032B276A793F00FB0125 /* libbsm.tbd */,
+				A24E0329276A793600FB0125 /* libbsm.0.tbd */,
+				A24E0323276A5C7200FB0125 /* libEndpointSecurity.tbd */,
+				A24E0321276A5C6A00FB0125 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A24E0317276A558900FB0125 /* main.m in Sources */,
+				A24E0327276A5DAF00FB0125 /* EndpointSecurity.m in Sources */,
 				A24E031E276A559E00FB0125 /* whoexec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +274,7 @@
 		A24E031B276A558900FB0125 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = whoexec/whoexec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -254,6 +283,7 @@
 		A24E031C276A558900FB0125 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = whoexec/whoexec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
